@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+const modal = require('../../alertModal')
 // axios.interceptors.request.use(function (config) {
 //     if(sessionStorage.getItem('didi_token')){
 //         config.headers.Authorization = `Bearer ${sessionStorage.getItem('didi_token')}`
@@ -19,9 +19,19 @@ axios.interceptors.response.use((config) => {
     // }
     return config
   }, (err) => {
-    // console.log(err.response.status)
-    includeStates.default.state.busyLoading = false
-    return Promise.reject(err);
+    if(err.response.status == 401){
+        localStorage.setItem('TG_LOGIN', false)
+        return Promise.reject(err.response)
+    }
+
+    let msg = {}
+    msg['modalTitle'] = '錯誤'
+    msg['modalText'] = err.response['data']['message']
+    msg['modalIcon'] = 'error',
+    msg['modalButtonText'] = '確定',
+    msg['modelRedirectUrl'] = ''
+    modal.modal(msg)
+    return Promise.reject(err.response);
 })
 
 const state = {
@@ -42,7 +52,7 @@ const actions = {
                   'Access-Control-Allow-Origin': '*',
                   'Accept': 'application/json',
                   'Content-Type': 'application/x-www-form-urlencoded',
-                  'Authorization': sessionStorage.getItem('didi_token'),
+                  'Authorization': localStorage.getItem('TG_AUTH_TOKEN'),
                 }
             })
             .then((response)=>{
@@ -56,14 +66,14 @@ const actions = {
     },
     postApi({commit, state}, data) {
         this.dispatch('busyLoading', true)
-        console.log(data)
         return new Promise((res, rej)=>{
             axios({
                 method: 'post',
                 url: `${process.env.VUE_APP_API_URL + data['url']}`,
                 headers: {
                     'Access-Control-Allow-Origin': '*',
-                    'Authorization': sessionStorage.getItem('didi_token'),
+                    'Accept': 'application/json',
+                    'Authorization': localStorage.getItem('TG_AUTH_TOKEN'),
                 },
                 data: data
             })

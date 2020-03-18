@@ -420,3 +420,10 @@ body, html {
 .table {
     margin-top: 40px;
 }
+
+#del-icon {
+    position: absolute;
+    z-index: 111;
+    right: 0;
+    top: 0;
+}

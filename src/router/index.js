@@ -1,7 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -19,6 +17,26 @@ const routes = [
     path: '/about',
     name: 'About',
     component: loadView('About')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: loadView('Login')
+  },
+  {
+    path: '/mission',
+    name: 'Mission',
+    component: loadView('Mission')
+  },
+  {
+    path: '/tradeBuy',
+    name: 'TradeBuy',
+    component: loadView('TradeBuy')
+  },
+  {
+    path: '/tradeSell',
+    name: 'TradeSell',
+    component: loadView('TradeSell')
   }
 ]
 

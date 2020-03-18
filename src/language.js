@@ -1,6 +1,7 @@
 var languageSet
 const languages = {
     JP: {
+        REGISTER: 'サインアップ',
         LOGIN_TXT: 'ログイン',
         FREE_LOGIN: '無料登録',
         SLIDE_RIGHT: 'スライドください',
@@ -112,9 +113,39 @@ const languages = {
         CANCEL_ORDER: 'キャンセル注文',
         CREDIT_CARD: 'クレジットカード',
         ONE_MORE_TRY: 'もう一度',
-        MAIL_BOX: 'メール'
+        MAIL_BOX: 'メール',
+        PLZMOBILE: '携帯入れてください',
+        TRADE: '売買',
+        PRESETMOBILE: 'プリセットは携帯番号です',
+        SUCCESS_LOGIN: 'ログインに成功しました',
+        MISSION: '任務',
+        MISSION_COMPLETE: '任務完成',
+        VERIFYCODE: '検証コード',
+        GETCODE: 'こーどに取る',
+        SUCCESS_REGISTER: '成功作成',
+        WANNABUY:'売り',
+        WANNASELL: '買い',
+        QRCODE_MAKE: 'QRCODE',
+        BUY_UCOIN: 'U-COIN取引',
+        BUY: '買い',
+        SELL: '売り',
     },
     TW: {
+        BUY: '購買',
+        SELL: '販賣',
+        BUY_UCOIN: '購買娛樂幣',
+        QRCODE_MAKE: 'QRCODE',
+        WANNABUY:'我要買',
+        WANNASELL: '我要賣',
+        SUCCESS_REGISTER: '成功註冊',
+        GETCODE: '取得驗證碼',
+        VERIFYCODE: '驗證碼',
+        MISSION_COMPLETE: '完成',
+        MISSION: '任務',
+        SUCCESS_LOGIN: '成功登入',
+        PRESETMOBILE: '預設為您手機號碼',
+        PLZMOBILE: '請輸入您的手機號碼',
+        REGISTER: '註冊',
         LOGIN_TXT: '登入',
         FREE_LOGIN: '免費登入',
         SLIDE_RIGHT: '往右滑驗證',
@@ -226,7 +257,8 @@ const languages = {
         CANCEL_ORDER: '取消訂單',
         CREDIT_CARD: '信用卡',
         ONE_MORE_TRY: '重試',
-        MAIL_BOX: '信件夾'
+        MAIL_BOX: '信件夾',
+        TRADE: '交易'
     }
 }
 

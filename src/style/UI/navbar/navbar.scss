@@ -1,0 +1,24 @@
+#navbar {
+    color: white;
+    padding: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    .navbarMb {
+        display: none;
+        padding: 15px;
+        @include md {
+            display: flex;
+        }   
+        @extend .navDefault;
+    }
+    .navbarPc {
+        padding: 15px;
+        @include md {
+            display: none;
+        }    
+        @extend .navDefault;
+    }
+}
+
+
