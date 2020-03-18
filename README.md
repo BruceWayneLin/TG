@@ -1,19 +1,22 @@
-# tg-front-platform
+# jp-platform
 
-## Project setup
+## build staging docker
 ```
-npm install
-```
+docker build -t platform -f docker/dock_stg/Dockerfile .
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+docker run -d -it -p 8080:80 --rm --name platform-staging platform
+
 ```
 
-### Compiles and minifies for production
+## if you want to build production docker
 ```
-npm run build
+docker build -t platform -f docker/dock_prod/Dockerfile .
+
+docker run -d -it -p 8080:80 --rm --name platform-prod platform
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## maintain page
+```
+maintain\index.html
+```
