@@ -2,7 +2,7 @@
 FROM node:10.14.1-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
-RUN npm install -g @vue/cli
+RUN npm install -g @vue/cli@latest
 RUN npm install
 COPY . .
 RUN npm run docker-stg
