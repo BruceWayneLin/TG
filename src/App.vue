@@ -24,7 +24,6 @@ export default {
   data() {
     return {
       count: null,
-      checkIn: false,
       qrImg: ''
     }
   },
@@ -32,6 +31,9 @@ export default {
     showQR() {
       return this.$store.state.control.showQR
     },
+    checkIn() {
+      return this.$store.state.control.checkIn
+    }
   },
   methods: {
     toTrigger() {
@@ -63,7 +65,7 @@ export default {
       this.$store.dispatch('getApi', data).then((item)=>{
         this.count = item['data']['data']['count']
         if(this.count !== null && this.count <= 7) {
-          this.checkIn = false
+          this.$store.dispatch('checkIn', true)
         }
       })
     },

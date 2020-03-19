@@ -2,7 +2,7 @@
   <section class="everydayCheckIn">
     <div class="content" >
             <div class="moneyFly">
-                <!-- <img id="del-icon" src="~@/assets/images/icon-cancel.png" alt="" @click="closeModal()"> -->
+                <img id="del-icon" src="~@/assets/images/icon-cancel.png" alt="" @click="closeModal()">
                 <img class="fallImg" v-show="showFallMoney" src="~@/assets/images/checkIn/moneyfall.gif" alt="">
                     <div class="container p-0">
                         <div class="row justify-content-center text-center">
@@ -87,6 +87,9 @@
         },
         countDays() {
           this.day = this.count == 1 ? 0 : this.count-1
+        },
+        closeModal() {
+          this.$store.dispatch('checkIn', false)
         }
     },
     computed: {

@@ -34,6 +34,14 @@
                 <font-awesome-icon icon="sign-out-alt" />
                 {{this.$root.$options['languageSet']['LOGOUT']}}
             </b-nav-item>
+            <b-nav-item-dropdown
+                :text="this.$root.$options['languageSet']['LANGUAGE']"
+                toggle-class="nav-link-custom"
+                right
+            >
+                <b-dropdown-item @click="language('ch-tw')">- 中文</b-dropdown-item>
+                <b-dropdown-item @click="language('JP')">- 日本語</b-dropdown-item>
+            </b-nav-item-dropdown>
         </b-nav>
     </div>
 </template>
@@ -48,6 +56,14 @@ export default {
         }
     },
     methods: {
+        language(lang) {
+            if(this.lang == 'jp'){
+                localStorage.setItem('ULG_LANG', lang)
+            } else {
+                localStorage.setItem('ULG_LANG', lang)
+            }
+            location.reload()
+        },
         showQR() {
             this.$store.dispatch('showQR', true)
         },

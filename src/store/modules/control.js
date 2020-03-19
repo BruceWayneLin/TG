@@ -6,6 +6,7 @@ const state = {
     buyModal: false, 
     sellModal: false,
     showQR: false,
+    checkIn: false
 }
 
 const getters = {
@@ -34,6 +35,9 @@ const actions = {
     showQR: ({commit, state}, payload)=> {
         commit('showQR', payload)
     },
+    checkIn: ({commit, state}, payload)=> {
+        commit('checkIn', payload)
+    }
 }
 
 const mutations = {
@@ -57,6 +61,9 @@ const mutations = {
     },
     showQR:  (state, payload)=> {
         state['showQR'] = payload
+    },
+    checkIn:  (state, payload)=> {
+        state['checkIn'] = payload
     }
 }
 
