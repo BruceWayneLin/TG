@@ -52,13 +52,13 @@ export default {
           this.$store.dispatch('updateUser', result['data']['data'])
       })
     },
-    buff() {
-      let data = {}
-      data['url'] = this.$root.$options.apiUrl['api6']
-      this.$store.dispatch('getApi', data).then((result)=>{
-        this.$store.dispatch('updateBuff', result['data']['data'])
-      })
-    },
+    // buff() {
+    //   let data = {}
+    //   data['url'] = this.$root.$options.apiUrl['api6']
+    //   this.$store.dispatch('getApi', data).then((result)=>{
+    //     this.$store.dispatch('updateBuff', result['data']['data'])
+    //   })
+    // },
     getCount() {
       let data = {}
       data['url'] = this.$root.$options.apiUrl['api7']
@@ -82,7 +82,7 @@ export default {
     // await this.toTrigger()
     if(localStorage.getItem('TG_LOGIN'))
     await this.me()
-    await this.buff()
+    // await this.buff()
     await this.getCount()
     await this.getQr()
   }

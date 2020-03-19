@@ -1,6 +1,6 @@
 const state = {
     userInfo: {},
-    buff: {}
+    // buff: {}
 }
 
 const getters = {
@@ -11,18 +11,18 @@ const actions = {
     updateUser({ commit }, payload) {
         commit('updateUser', payload)
     },
-    updateBuff({ commit }, payload) {
-        commit('updateBuff', payload)
-    }
+    // updateBuff({ commit }, payload) {
+    //     commit('updateBuff', payload)
+    // }
 }
 
 const mutations = {
     updateUser(state, payload) { 
         state['userInfo'] = payload
     },
-    updateBuff(state, payload) {
-        state['buff'] = payload
-    }
+    // updateBuff(state, payload) {
+    //     state['buff'] = payload
+    // }
 }
 
 export default {

@@ -4,7 +4,7 @@ export default {
     api3: '/api/v1/user/token',
     api4: '/api/v1/user/me',
     api5: '/api/v1/user/token/revoke',
-    api6: '/api/v1/user/buff',
+    // api6: '/api/v1/user/buff',
     api7: '/api/v1/sign_in/count',
     api8: '/api/v1/mission',
     api9: '/api/v1/mission/trigger',
