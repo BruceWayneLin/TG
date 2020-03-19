@@ -1,6 +1,5 @@
 const state = {
-    userInfo: {
-    },
+    userInfo: {},
     buff: {}
 }
 
