@@ -23,10 +23,10 @@
 
       <div class="container text-center mt-3">
           <button class="btn btn-info" @click="register()">
-            註冊
+            {{this.$root.$options['languageSet']['REGISTER']}}
           </button>
           <button class="btn btn-primary ml-3" @click="login()">
-            送出
+            {{this.$root.$options['languageSet']['SUBMIT']}}
           </button>
       </div>
     </div>
