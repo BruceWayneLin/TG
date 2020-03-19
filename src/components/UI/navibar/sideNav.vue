@@ -57,7 +57,7 @@ export default {
     },
     methods: {
         language(lang) {
-            if(this.lang == 'jp'){
+            if(lang == 'jp'){
                 localStorage.setItem('ULG_LANG', lang)
             } else {
                 localStorage.setItem('ULG_LANG', lang)
